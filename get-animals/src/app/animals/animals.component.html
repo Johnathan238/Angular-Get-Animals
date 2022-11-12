@@ -1,11 +1,13 @@
-<div class="row">
+<div class="row" *ngFor=" let breed of allBreed">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Rottweiler_standing_facing_left.jpg/800px-Rottweiler_standing_facing_left.jpg" alt="...">
+      <img src="{{ breed.image.url }}" alt="...">
       <div class="caption">
-        <h3>Rottweiler</h3>
-        <p>Just a place holder until I call API</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <h3> Name - {{breed.name}}</h3>
+        <p>{{breed.breed_group}}</p>
+        <p>Metric - {{breed.height.metric}}</p>
+        <p>Life Span - {{breed.life_span}}</p>
+        <p>{{ breed.origin }}</p>
       </div>
     </div>
   </div>
